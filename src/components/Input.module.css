@@ -1,0 +1,57 @@
+.inputForm {
+  max-width: 736px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: calc(0px - 1.6875rem);
+  padding: 0 1rem;
+
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.inputForm:focus-within .inputContainer {
+  border: 1px solid var(--purple-300);
+}
+
+.inputContainer {
+  flex: 1;
+  background: var(--gray-500);
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid transparent;
+}
+
+.inputContainer input {
+  background: transparent;
+  color: var(--gray-100);
+  border: 0;
+  width: 100%;
+  outline: none;
+}
+
+.inputForm button[type='submit'] {
+  background: var(--blue-400);
+  border: 0;
+  border-radius: 8px;
+  padding: 1rem;
+  color: var(--gray-100);
+  font-weight: bold;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+
+  transition: background-color 0.1s;
+}
+
+.inputForm button[type='submit']:not(:disabled):hover {
+  background: var(--blue-200);
+}
+
+.inputForm button[type='submit']:disabled {
+  filter: brightness(60%);
+  cursor: not-allowed;
+}
